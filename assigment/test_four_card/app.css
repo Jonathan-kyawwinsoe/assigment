@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.root {
+  --main-color: white;
+  --text-color: black;
+}
+
+body {
+  background-color: var(--main-color);
+  color: var(--text-color);
+}
+header {
+  margin: 30px 10px;
+  padding: auto;
+  text-align: center;
+}
+header span {
+  font-size: 27px;
+  font-weight: 50;
+  color: gray;
+}
+header h1 {
+  font-weight: 600;
+  color: rgb(83, 76, 76);
+}
+header p {
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.5rem;
+  font-size: small;
+  color: gray;
+}
+/* header end  */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.middle-colum {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container .box {
+  width: 300px;
+  height: 200px;
+  padding: 20px;
+  /* border: 1px solid black; */
+  margin: 5px;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px;
+}
+img {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+}
+.container .box1 {
+  border-top: 4px solid blue;
+}
+.container .box2 {
+  border-top: 4px solid gold;
+}
+.container .box3 {
+  border-top: 4px solid green;
+}
+.container .box4 {
+  border-top: 4px solid red;
+}
+
+@media (max-width: 950px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+  }
+  .middle-colum {
+    width: 100%;
+    align-items: center;
+  }
+  .container.box {
+    width: 90%;
+    max-width: 350px;
+  }
+}

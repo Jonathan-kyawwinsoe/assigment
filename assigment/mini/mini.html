@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+      font-family: "Fira Code", monospace;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+    /* nevbar start */
+    header {
+      max-width: 100%;
+      max-height: 50%;
+      margin: 10px 30px;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid gold;
+      background-color: gold;
+      border-radius: 10px;
+      color: red;
+    }
+    .nav a {
+      width: 50px;
+      padding: 1px 2px;
+      text-decoration: none;
+      color: red;
+    }
+    /* nevbar End */
+    /* Section start  */
+    section {
+      margin: 2px 30px;
+      padding: 50px;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      border: 1px solid gold;
+      border-radius: 20px;
+      gap: 20px;
+    }
+    /* section layout */
+    .registerForm,
+    .grid_form {
+      background: red;
+      padding: 30px;
+      border-radius: 50px;
+      max-width: 450px;
+    }
+    /* register From  */
+
+    form label,
+    form input {
+      display: block;
+      width: 25rem;
+      color: black;
+    }
+    h2 {
+      text-align: center;
+    }
+    form input {
+      margin-bottom: 5px;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+    }
+    .btn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 30px;
+      background-color: blue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    /* calculator  */
+    .btn_calculator {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      padding: 5px;
+      column-gap: 15px;
+      row-gap: 15px;
+    }
+
+    .btn_calculator button {
+      background-color: gray;
+      color: white;
+      padding: 10px;
+      font-size: 30px;
+      text-align: center;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+    }
+    .grid_form input {
+      display: block;
+      margin: 20px auto;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: blue;
+    }
+    /* section End  */
+
+    .register_table {
+      margin: 30px;
+      padding: auto;
+      border-radius: 10px;
+      border: 1px solid gold;
+    }
+
+    .register_table table,
+    th,
+    td {
+      margin: 20px auto;
+      padding: 30px;
+      border: 1px solid white;
+      font-weight: 100;
+    }
+    /* footer start  */
+
+    footer .content {
+      margin: 10px 30px;
+      padding: 10px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border: 1px solid gold;
+      border-radius: 20px;
+    }
+    .content a {
+      color: white;
+      text-decoration: none;
+    }
+    /* footer end  */
+  </style>
+  <body>
+    <header>
+      <h1>Hello World!</h1>
+      <div class="nav">
+        <a href="">Home</a>
+        <a href="">Project</a>
+        <a href="">Content</a>
+      </div>
+    </header>
+    <section>
+      <div class="registerForm">
+        <h2>Register Form</h2>
+        <div class="reg_form">
+          <form action="">
+            <label for="name">Name</label>
+            <input type="text" id="name" />
+            <label for="email">Email</label>
+            <input type="email" id="email" />
+            <label for="password">Password</label>
+            <input type="password" id="password" />
+            <label for="comfirm_password">Confirm Password</label>
+            <input type="password" id="comfirm_password" />
+            <button type="submit" class="btn">Sing Up</button>
+          </form>
+        </div>
+      </div>
+      <div class="grid_form">
+        <h2>Calculator</h2>
+        <input type="text" />
+        <div class="btn_calculator">
+          <button>7</button><button>8</button><button>9</button
+          ><button>/</button> <button>4</button><button>5</button
+          ><button>6</button><button>*</button> <button>1</button
+          ><button>2</button><button>3</button><button>-</button>
+          <button>0</button><button>.</button><button>=</button
+          ><button>+</button>
+        </div>
+      </div>
+    </section>
+    <article>
+      <div class="register_table">
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+          </tr>
+          <tr>
+            <th>Mg MG</th>
+            <th>mgmg@gmail.com</th>
+            <th>admin123</th>
+          </tr>
+        </table>
+      </div>
+    </article>
+    <footer>
+      <div class="content">
+        <a href="">09 450 666 006</a>
+        <p>Welcome To My Testin Page</p>
+        <a href="">You Tube</a>
+        <a href="">Instagram</a>
+      </div>
+    </footer>
+  </body>
+</html>
