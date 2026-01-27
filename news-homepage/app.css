@@ -160,6 +160,8 @@ a:hover {
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 10px;
+  color: hsl(36, 100%, 99%);
+  cursor: pointer;
 }
 .news-item p {
   font-size: 15px;
@@ -172,11 +174,6 @@ a:hover {
 .news-item:last-child p {
   border-bottom: none;
   padding-bottom: 0;
-}
-.news-item h4 {
-  color: hsl(36, 100%, 99%);
-  font-weight: 700;
-  cursor: pointer;
 }
 .news-item h4:hover {
   color: hsl(35, 77%, 62%);
@@ -296,20 +293,30 @@ a:hover {
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   .main-content {
-    flex-direction: column;
+    flex-direction: row;
     padding: 15px;
     gap: 30px;
   }
+  .left-section {
+    flex: 2;
+  }
   .left-content {
-    flex-direction: column;
+    flex-direction: row;
     gap: 15px;
   }
   .left-content h1 {
-    font-size: 50px;
+    font-size: 40px;
   }
-  .left-child-content {
-    align-items: center;
-    text-align: center;
+  .news-item {
+    padding: 5px 0;
+  }
+  .news-item h4 {
+    font-size: 16px;
+    margin-top: 0;
+  }
+  .news-item p {
+    font-size: 14px;
+    padding-bottom: 15px;
   }
   .right-content {
     width: 100%;
@@ -324,12 +331,6 @@ a:hover {
     flex-direction: row;
     align-items: center;
   }
-  .humbuger {
-    display: block;
-  }
-  .nev-bar {
-    display: none;
-  }
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
   .main-content {
@@ -337,16 +338,27 @@ a:hover {
     padding: 20px;
     gap: 40px;
   }
+  .left-section {
+    flex: 2;
+  }
+  .news-item {
+    padding: 0 10px;
+  }
+  .news-item h4 {
+    font-size: 18px;
+    margin-top: 0;
+  }
+  .news-item p {
+    font-size: 15px;
+    /* padding-bottom: 20px; */
+  }
   .left-content {
     flex-direction: row;
     gap: 20px;
+    /* width: 100%; */
   }
   .left-content h1 {
     font-size: 40px;
-  }
-  .left-child-content {
-    align-items: center;
-    text-align: center;
   }
   .right-content {
     width: 100%;
@@ -354,6 +366,7 @@ a:hover {
   .cover-photo img {
     width: 100%;
   }
+
   .numbered-news {
     flex-direction: row;
   }
