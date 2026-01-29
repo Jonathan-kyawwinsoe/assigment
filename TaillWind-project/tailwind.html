@@ -34,31 +34,63 @@
           src="../sunnyside-agency-landing-page-main/images/logo.svg"
           alt=""
         />
-        <img
-          class="block md:hidden"
-          src="../sunnyside-agency-landing-page-main/images/icon-hamburger.svg"
-          alt=""
-        />
+        <button
+          id="menu-btn"
+          class="block md:hidden focus:outline-none"
+          type="button"
+        >
+          <img
+            src="../sunnyside-agency-landing-page-main/images/icon-hamburger.svg"
+            alt=""
+          />
+        </button>
+        <div
+          id="mobile-menu"
+          class="hidden absolute top-20 bg-white right-6 p-10 items-center gap-8 text-gray-500 font-barlow font-bold z-50 shadow-xl"
+        >
+          <ul>
+            <li
+              class="hover:bg-gray-600 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500 active:bg-blue-700 rounded-lg w-24 text-center py-2"
+            >
+              <a href="#">About</a>
+            </li>
+            <li
+              class="hover:bg-gray-600 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500 active:bg-blue-700 rounded-lg w-24 text-center py-2"
+            >
+              <a href="#">Services</a>
+            </li>
+            <li
+              class="hover:bg-gray-600 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500 active:bg-blue-700 rounded-lg w-24 text-center py-2"
+            >
+              <a href="#">Project</a>
+            </li>
+            <li
+              class="hover:bg-gray-600 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500 active:bg-blue-700 rounded-lg w-24 text-center py-2"
+            >
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
         <ul
           class="hidden md:flex space-x-4 justify-between p-4 text-white font-bold mx-2"
         >
           <li
-            class="hover:bg-blue-600 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500 active:bg-blue-700 rounded-lg w-24 text-center px-6 py-2"
+            class="hover:bg-gray-600 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500 active:bg-blue-700 rounded-lg w-24 text-center py-2"
           >
             <a href="#">About</a>
           </li>
           <li
-            class="hover:bg-blue-600 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500 active:bg-blue-700 rounded-lg w-24 text-center py-2"
+            class="hover:bg-gray-600 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500 active:bg-blue-700 rounded-lg w-24 text-center py-2"
           >
             <a href="#">Services</a>
           </li>
           <li
-            class="hover:bg-blue-600 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500 active:bg-blue-700 rounded-lg w-24 text-center py-2"
+            class="hover:bg-gray-600 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500 active:bg-blue-700 rounded-lg w-24 text-center py-2"
           >
             <a href="#">Project</a>
           </li>
           <li
-            class="hover:bg-blue-600 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500 active:bg-blue-700 rounded-lg w-24 text-center py-2"
+            class="hover:bg-gray-600 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500 active:bg-blue-700 rounded-lg w-24 text-center py-2"
           >
             <a href="#">Contact</a>
           </li>
@@ -163,9 +195,7 @@
           alt=""
         />
 
-        <div
-          class="absolute bottom-10 left-0 right-0 px-6 text-center bg-green-800"
-        >
+        <div class="absolute bottom-10 left-0 right-0 px-6 text-center">
           <h2 class="font-fraunces text-3xl mb-6">Graphic Design</h2>
           <p class="font-barlow max-w-xs mx-auto text-sm md:text-base">
             Great design makes you memorable. We deliver artwork that
@@ -336,4 +366,16 @@
       </footer>
     </div>
   </body>
+  <script>
+    // const btn = (document.getElementById = "menu-btn");
+    // const menu = (document.getElementById = "mobile-menu");
+
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("mobile-menu");
+
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+      // menu.classList.toggle("flex");
+    });
+  </script>
 </html>
