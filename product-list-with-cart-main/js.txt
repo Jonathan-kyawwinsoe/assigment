@@ -1,0 +1,196 @@
+ const productList = document.getElementById("productList");
+      fetch("./data.json")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Can not found the data");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data);
+
+          data.forEach((product) => {
+            const productCard = `
+    <div class="flex flex-col mb-10">
+      <div class="relative flex flex-col items-center">
+
+          <picture>
+            <source media="(min-width: 1024px)" srcset="${product.image.desktop}">
+            <source media="(min-width: 768px)" srcset="${product.image.tablet}">
+            <img src="${product.image.mobile}" alt="${product.name}" class="rounded-xl w-full border-transparent hover:border-[#c73b0f] transition-all">
+          </picture>
+
+        <div class="absolute -bottom-5 w-max">
+            <button class="flex items-center gap-2 bg-white border border-[#ad8a85] px-6 py-3 rounded-full shadow-md hover:text-[#c73b0f] hover:border-[#c73b0f] transition-all group">
+              <img src="./assets/images/icon-add-to-cart.svg" alt="cart" class="w-5 h-5">
+              <span class="font-bold text-sm text-[#260f08]">Add to Cart</span>
+            </button>
+        </div>
+      </div>
+
+      <div class="mt-8 text-left">
+          <p class="text-[#ad8a85] text-xs font-normal">${product.category}</p>
+          <h3 class="font-bold text-[#260f08] text-base mb-1">${product.name}</h3>
+          <p class="text-[#c73b0f] font-bold">$${product.price.toFixed(2)}</p>
+      </div>
+     </div>
+    `;
+
+            productList.innerHTML += productCard;
+          });
+        });
+
+        => => => This is Api call => => => 
+
+
+const addBtn = document.getElementById("add_to_card");
+const quanity = document.getElementById("quantity");
+const count_quanity = document.getElementById("count");
+const minusBtn = document.getElementById("minus-btn");
+const plusBtn = document.getElementById("plus-btn");
+
+let count = 1;
+
+addBtn.addEventListener("click", () => {
+  addBtn.classList.add("hidden");
+  quanity.classList.remove("hidden");
+  quanity.classList.add("flex");
+  count = 1;
+  count_quanity.innerText = count;
+});
+
+plusBtn.addEventListener("click", () => {
+  count++;
+  count_quanity.innerHTML = count;
+});
+
+minusBtn.addEventListener("click", () => {
+  if (count > 1) {
+    count--;
+    count_quanity.innerText = count;
+  } else {
+    quanity.classList.add("hidden");
+    quanity.classList.remove("flex");
+    addBtn.classList.remove("hidden");
+  }
+});
+
+=> => => This is button JS => => =>
+
+
+
+
+
+
+
+
+
+
+
+function BtnClick(index) {
+//   const product = allProduct[index];
+
+//   const existingItem = cart.find((item) => item.index === index);
+
+//   if (existingItem) {
+//     existingItem = {
+//       name: product.name,
+//       price: product.price,
+//       quantity: 1,
+//       index: index,
+//     };
+//     cart.push(existingItem);
+//   }
+
+//   const addBtn = document.getElementById(`addToCard-${index}`);
+//   const qtybtn = document.getElementById(`qty-btn-${index}`);
+//   const count = document.getElementById(`count-${index}`);
+
+//   addBtn.classList.add("hidden");
+//   qtybtn.classList.remove("hidden");
+//   qtybtn.classList.add("flex");
+
+//   count.innerText = existingItem.quantity;
+
+//   renderCart();
+// }
+
+// function updateQty(index, change) {
+//   const itemInCart = cart.find((item) => item.index === index);
+//   const currentCount = document.getElementById(`count-${index}`);
+//   const addBtn = document.getElementById(`addToCard-${index}`);
+//   const qtyContainer = document.getElementById(`qty-btn-${index}`);
+
+//   if (itemInCart) {
+//     itemInCart.quantity += change;
+//     if (itemInCart.quantity < 1) {
+//       cart = cart.filter((item) => item.index !== index);
+
+//       addBtn.classList.remove("hidden");
+//       qtyContainer.classList.add("hidden");
+//       qtyContainer.classList.remove("flex");
+//     } else {
+//       currentCount.innerText = itemInCart.quantity;
+//     }
+//   }
+//   renderCart();
+// }
+// function renderCart() {
+//   const cartCount = document.getElementById("cart-count");
+//   const cartContainer = document.getElementById("cart-items");
+//   const emptyCard = document.getElementById("empty-cart");
+//   const totalDisplay = document.getElementById("grand-total");
+//   const checkOut = document.getElementById("checkOut");
+
+//   if (cart.length === 0) {
+//     emptyCard.classList.remove("flex");
+//     checkOut.classList.add("hidden");
+//     cartCount.innerText = "0";
+//     cartContainer.innerHTML = "";
+//     return;
+//   }
+
+//   //   console.log(cart);
+
+//   emptyCard.classList.add("hidden");
+//   checkOut.classList.remove("hidden");
+
+//   let cartHTML = "";
+//   let totalcash = 0;
+//   let totalItem = 0;
+
+//   cart.forEach((items, index) => {
+//     totalcash += items.price * items.quantity;
+//     totalItem += items.quantity;
+
+//     cartHTML += `<div class="flex justify-between items-center py-4">
+//         <div>
+//           <p class="font-bold text-sm text-gray-800">${items.name}</p>
+//           <div class="flex gap-4 mt-1">
+//             <span class="text-orange-700 font-bold">${items.quantity}x</span>
+//             <span class="text-gray-400">@ $${items.price.toFixed(2)}</span>
+//             <span class="text-gray-600 font-semibold">$${(items.price * items.quantity).toFixed(2)}</span>
+//           </div>
+//         </div>
+//         <button onclick="removeFromCart(${index})" class="border border-gray-300 rounded-full p-1 hover:border-gray-800">
+//            <img src="./assets/images/icon-remove-item.svg" class="w-3 h-3">
+//         </button>
+//       </div>`;
+//   });
+
+//   cartContainer.innerHTML = cartHTML;
+//   cartCount.innerText = totalItem;
+//   totalDisplay.innerText = `$${totalcash.toFixed(2)}`;
+// }
+// function removeFromCart(indexInCart) {
+//   const item = cart[indexInCart];
+//   const productIndex = item.index;
+
+//   document
+//     .getElementById(`addToCard-${productIndex}`)
+//     .classList.remove("hidden");
+//   document.getElementById(`qty-btn-${productIndex}`).classList.add("hidden");
+//   document.getElementById(`qty-btn-${productIndex}`).classList.remove("flex");
+//   cart.splice(indexInCart, 1);
+//   renderCart();
+// }

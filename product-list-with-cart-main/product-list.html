@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../src/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@400,600,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Product list with cart</title>
+  </head>
+  <style>
+    body {
+      font-family: "Red Hat Text", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+    }
+  </style>
+  <body>
+    <div class="flex flex-col lg:flex-row md:flex-row lg:mt-10 lg:mx-20">
+      <div class="md:w-3/4">
+        <h1 class="font-bold text-4xl px-5 text-black">Dessets</h1>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4"
+          id="productList"
+        ></div>
+      </div>
+      <div class="lg:w-1/3 mt-8 lg:mt-0 lg:ml-8">
+        <div class="bg-white p-6 rounded-xl shadow-lg sticky top-8">
+          <h2 class="text-2xl font-bold text-rose-900 mb-4">
+            Your Cart (<span id="cart-count">0</span>)
+          </h2>
+
+          <div
+            id="cart-items"
+            class="divide-y divide-gray-100 max-h-[60vh] overflow-y-auto"
+          >
+            <div id="empty-cart" class="py-10 text-center">
+              <img
+                src="./assets/images/illustration-empty-cart.svg"
+                alt=""
+                class="mx-auto mb-4"
+              />
+              <p class="text-gray-500 font-semibold text-sm">
+                Your added items will appear here
+              </p>
+            </div>
+          </div>
+
+          <div id="checkOut" class="mt-6 hidden">
+            <div class="flex justify-between items-center mb-6">
+              <span class="text-gray-600 text-sm md:text-base"
+                >Order Total</span
+              >
+              <span id="price-total" class="text-2xl font-bold text-gray-800"
+                >$0.00</span
+              >
+            </div>
+
+            <div
+              class="bg-rose-50 p-4 rounded-lg flex items-center justify-center gap-2 mb-6"
+            >
+              <img src="./assets/images/icon-carbon-neutral.svg" alt="" />
+              <p class="text-xs md:text-sm text-gray-700">
+                This is a
+                <span class="font-bold text-black">carbon-neutral</span>
+                delivery
+              </p>
+            </div>
+
+            <button
+              class="w-full bg-orange-700 text-white py-4 rounded-full font-bold hover:bg-orange-800 transition-colors"
+            >
+              Confirm Order
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./productList.js"></script>
+</html>
