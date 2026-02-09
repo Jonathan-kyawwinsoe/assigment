@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+
+  <body class="font-poppins">
+    <!-- nav bar start -->
+
+    <nav
+      class="flex justify-between md:flex md:justify-between items-center bg-text-surface py-3 px-10 shadow-sm"
+    >
+      <div class="flex gap-16">
+        <div class="flex items-center s">
+          <img
+            src="./image/Group 19999 1.png"
+            class="h-12 hidden md:block"
+            alt="Innovix"
+          />
+          <img src="./image/logo.png" class="md:hidden" alt="" />
+        </div>
+
+        <ul class="hidden lg:flex gap-4 items-center mb-0">
+          <li>
+            <a class="text-primary-text font-bahn" href="#">Banking</a>
+          </li>
+          <li>
+            <a class="text-primary-text font-bahn" href="#">Bancassurance</a>
+          </li>
+          <li>
+            <a class="text-primary-text font-bahn" href="#">Who We are</a>
+          </li>
+          <li>
+            <a class="text-primary-text font-bahn" href="#">Promotions</a>
+          </li>
+          <li>
+            <a class="text-primary-text font-bahn" href="#">News</a>
+          </li>
+        </ul>
+      </div>
+      <div class="flex items-center gap-2 md:gap-6">
+        <div class="hidden lg:flex items-center text-sm">
+          <a
+            class="text-decoration-none text-dark hover:text-secondary-color font-bahn"
+            href="#"
+            >EN</a
+          >
+          <span class="mx-2">|</span>
+          <a
+            class="text-decoration-none text-dark hover:text-secondary-color font-bahn"
+            href="#"
+            >MY</a
+          >
+        </div>
+        <button class="text-black">
+          <img
+            src="./image/mingcute_search-line.svg"
+            class="w-6 h-6 md:w-12 md:h-12"
+            alt=""
+          />
+        </button>
+
+        <button
+          class="bg-primary-color text-white w-20 h-[31px] text-sm rounded-sm hover:bg-button-active sm:block md:w-32 md:h-[38px] md:font-bahn"
+        >
+          LOGIN
+        </button>
+        <button class="lg:hidden">
+          <img src="./image/Vector.png" class="w-6 h-6 md:w-8 md:h-8" alt="" />
+        </button>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- carousel start -->
+    <main>
+      <section class="lg:w-full flex justify-center bg-gray-100">
+        <div
+          id="default-carousel"
+          class="relative w-full md:h-[550px] overflow-hidden"
+          data-carousel="slide"
+          data-carousel-interval="5000"
+        >
+          <div class="relative h-[180px] md:h-full overflow-hidden">
+            <div
+              class="hidden duration-2000 w-full h-[180px] lg:w-full lg:h-full ease-in-out"
+              data-carousel-item="active"
+            >
+              <img
+                src="./image/firstPhoto.jpg"
+                class="absolute block w-full h-[180px] md:w-full md:h-[550px] object-center"
+                alt="Building"
+              />
+            </div>
+            <div
+              class="hidden duration-2000 ease-in-out w-full h-[180px] lg:w-full lg:h-full"
+              data-carousel-item
+            >
+              <img
+                src="./image/SecondPhoto.jpg"
+                class="absolute block w-full h-[180px] md:w-full md:h-[550px] object-center"
+                alt="Bridge"
+              />
+            </div>
+            <div
+              class="hidden duration-2000 ease-in-out w-full h-[180px] lg:w-full lg:h-full"
+              data-carousel-item
+            >
+              <img
+                src="./image/thirdPhoto.jpg"
+                class="absolute block w-full h-[180px] md:w-full md:h-[550px] object-center"
+                alt="Bridge"
+              />
+            </div>
+            <div
+              class="hidden duration-2000 ease-in-out w-full h-[180px] lg:w-full lg:h-full"
+              data-carousel-item
+            >
+              <img
+                src="./image/4Photo.jpg"
+                class="absolute block w-full h-[180px] md:w-full md:h-[550px] object-center"
+                alt="Bridge"
+              />
+            </div>
+            <div
+              class="hidden duration-2000 ease-in-out w-full h-[180px] lg:w-full lg:h-full"
+              data-carousel-item
+            >
+              <img
+                src="./image/5Photo.jpg"
+                class="absolute block w-full h-[180px] md:w-full md:h-[550px] object-center"
+                alt="Bridge"
+              />
+            </div>
+          </div>
+
+          <div
+            class="absolute z-30 flex flex-col items-center -translate-y-1/2 right-4 md:right-10 top-1/2 space-y-2.5"
+          >
+            <button
+              type="button"
+              class="w-2 h-2 md:w-3 md:h-3 rounded-full border-2 border-white bg-white"
+              aria-current="true"
+              aria-label="Slide 1"
+              data-carousel-slide-to="0"
+            ></button>
+            <button
+              type="button"
+              class="w-2 h-2 md:w-3 md:h-3 rounded-full border-2 border-white bg-transparent hover:bg-white/50"
+              aria-current="false"
+              aria-label="Slide 2"
+              data-carousel-slide-to="1"
+            ></button>
+            <button
+              type="button"
+              class="w-2 h-2 md:w-3 md:h-3 rounded-full border-2 border-white bg-transparent hover:bg-white/50"
+              aria-current="false"
+              aria-label="Slide 3"
+              data-carousel-slide-to="2"
+            ></button>
+            <button
+              type="button"
+              class="w-2 h-2 md:w-3 md:h-3 rounded-full border-2 border-white bg-transparent hover:bg-white/50"
+              aria-current="false"
+              aria-label="Slide 4"
+              data-carousel-slide-to="3"
+            ></button>
+            <button
+              type="button"
+              class="w-2 h-2 md:w-3 md:h-3 rounded-full border-2 border-white bg-transparent hover:bg-white/50"
+              aria-current="false"
+              aria-label="Slide 5"
+              data-carousel-slide-to="4"
+            ></button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- carousel end  -->
+
+    <!-- section cart start  -->
+    <section
+      class="flex flex-col lg:flex-row lg:items-start justify-center items-center m-auto gap-4 px-4 md:px-8 py-10 bg-background"
+    >
+      <div class="flex-col flex gap-4 w-full lg:w-auto">
+        <div
+          class="bg-text-surface flex flex-col md:flex-row lg:gap-6 rounded-lg shadow border-2-xl p-4"
+        >
+          <img
+            src="./image/Rectangle 27.jpg"
+            class="w-full md:w-auto object-cover rounded-md"
+            alt=""
+          />
+          <div class="flex flex-col gap-4 lg:gap-5 m-8">
+            <h1 class="text-xl font-medium">Saving Deposit</h1>
+            <div class="flex flex-col gap-3">
+              <div class="flex gap-3">
+                <img src="./image/Group.svg" class="w-4 h-4 mt-1" alt="" />
+                <p class="font-normal text-primary-text text-[13px]">
+                  Earn compound interest on deposit.
+                </p>
+              </div>
+              <div class="flex gap-3">
+                <img src="./image/Group.svg" class="w-4 h-4 mt-1" alt="" />
+                <p class="font-normal text-primary-text text-[13px]">
+                  Eligible for ATM/ debit Card, mobile banking.
+                </p>
+              </div>
+              <div class="flex gap-3">
+                <img src="./image/Group.svg" alt="" />
+                <p class="font-normal text-primary-text text-[13px]">
+                  Convenient and reliable for payments
+                </p>
+              </div>
+              <div class="flex">
+                <a href="#" class="text-tertiary font-">More Detail</a>
+                <a href="#"
+                  ><img src="./image/uil_angle-right-b.svg" alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-text-surface flex flex-col md:flex-row gap-4 lg:gap-6 rounded-lg shadow border-2-xl p-4"
+        >
+          <img
+            src="./image/sec.jpg"
+            class="w-full md:w-auto object-cover rounded-md"
+            alt=""
+          />
+          <div class="flex flex-col gap-4 lg:gap-5 m-8">
+            <h1 class="text-xl font-medium">Call Deposit</h1>
+            <div class="flex flex-col gap-3">
+              <div class="flex gap-3">
+                <img src="./image/Group.svg" alt="" />
+                <p class="font-normal text-primary-text text-[13px]">
+                  Earn interest on your daily balance.
+                </p>
+              </div>
+              <div class="flex gap-3">
+                <img src="./image/Group.svg" class="w-4 h-4 mt-1" alt="" />
+                <p class="font-normal text-primary-text text-[13px]">
+                  Convenient & reliable for regular payments
+                </p>
+              </div>
+              <div class="flex gap-3">
+                <img src="./image/Group.svg" class="w-4 h-4 mt-1" alt="" />
+                <p class="font-normal text-primary-text text-[13px]">
+                  Can transfer money from account to account.
+                </p>
+              </div>
+              <div class="flex">
+                <a href="#" class="text-tertiary font-">More Detail</a>
+                <a href="#"
+                  ><img
+                    src="./image/uil_angle-right-b.svg"
+                    class="w-4 h-4 mt-1"
+                    alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row lg:flex-row w-full lg:w-auto gap-4">
+        <div
+          class="p-4 gap-5 w-full sm:w-[332px] h-[536.89px] bg-text-surface rounded-lg shadow border-2-xl"
+        >
+          <img
+            src="./image/girl.jpg"
+            class="w-full object-cover rounded-md"
+            alt=""
+          />
+          <div class="flex flex-col gap-5 m-8">
+            <h1 class="text-xl font-medium">MTB MPU Debit Card</h1>
+            <div class="flex flex-col gap-3">
+              <div class="flex gap-3">
+                <img src="./image/Group.svg" class="w-4 h-4 mt-1" alt="" />
+                <p class="font-normal text-primary-text text-[13px]">
+                  Earn compound interest on deposit.
+                </p>
+              </div>
+              <div class="flex gap-3">
+                <img src="./image/Group.svg" class="w-4 h-4 mt-1" alt="" />
+                <p class="font-normal text-primary-text text-[13px]">
+                  Eligible for ATM/ debit Card, mobile banking.
+                </p>
+              </div>
+              <div class="flex gap-3">
+                <img src="./image/Group.svg" class="w-4 h-4 mt-1" alt="" />
+                <p class="font-normal text-primary-text text-[13px]">
+                  Convenient and reliable for payments
+                </p>
+              </div>
+              <div class="flex">
+                <a href="#" class="text-tertiary font-">More Detail</a>
+                <a href="#"
+                  ><img src="./image/uil_angle-right-b.svg" alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="p-4 w-full sm:w-[332px] h-[536.89px] bg-text-surface rounded-lg shadow border-2-xl"
+        >
+          <img
+            src="./image/family.jpg"
+            class="w-full object-cover rounded-md"
+            alt=""
+          />
+          <div class="flex flex-col gap-5 m-8">
+            <h1 class="text-xl font-medium">MTB MPU Debit Card</h1>
+            <p
+              class="bg-primary-blue w-[81px] text-center rounded-sm px-1 py-0.5 h-[21px] gap-5 text-xs"
+            >
+              Shorten Laon
+            </p>
+            <div class="flex flex-col gap-3">
+              <div class="flex gap-3">
+                <img src="./image/Group.svg" class="w-4 h-4 mt-1" alt="" />
+                <p class="font-normal text-primary-text text-[13px]">
+                  Earn compound interest on deposit.
+                </p>
+              </div>
+              <div class="flex gap-3">
+                <img src="./image/Group.svg" class="w-4 h-4 mt-1" alt="" />
+                <p class="font-normal text-primary-text text-[13px]">
+                  Eligible for ATM/ debit Card, mobile banking.
+                </p>
+              </div>
+              <div class="flex gap-3">
+                <img src="./image/Group.svg" class="w-4 h-4 mt-1" alt="" />
+                <p class="font-normal text-primary-text text-[13px]">
+                  Convenient and reliable for payments
+                </p>
+              </div>
+              <div class="flex">
+                <a href="#" class="text-tertiary font-">More Detail</a>
+                <a href="#"
+                  ><img src="./image/uil_angle-right-b.svg" alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section cart end  -->
+
+    <!-- exchange rate start  -->
+    <section class="bg-linear-gradient p-4 md:p-8">
+      <div class="max-w-7xl mx-auto m-0 md:m-8">
+        <h1
+          class="text-3xl md:text-4xl font-medium text-heading-black pb-6 md:pb-10 text-center lg:text-left"
+        >
+          Rates & Others
+        </h1>
+        <div class="flex flex-col lg:flex-row items-center gap-4 lg:items-end">
+          <div
+            class="bg-text-surface w-full lg:w-[680px] min-h-[377px] rounded-xl pb-8"
+          >
+            <h1
+              class="text-2xl md:text-[28px] px-6 md:px-8 py-6 md:py-8 text-heading-black"
+            >
+              Currency Exchange Rate
+            </h1>
+            <div class="gap-6 md:gap-8 flex flex-col">
+              <div
+                class="flex justify-between px-6 md:px-8 text-sm md:text-base"
+              >
+                <p class="text-paragraph-color">Last updated on</p>
+                <p class="text-primary-text">9 May 2024,10:24 am</p>
+              </div>
+              <div
+                class="flex justify-between items-center px-6 md:px-8 py-4 border-b border-gray-50 lg:border-none"
+              >
+                <div class="flex gap-3 items-center">
+                  <img
+                    src="./image/usa.svg"
+                    class="w-8 h-8 md:w-10 md:h-10"
+                    alt=""
+                  />
+                  <p class="text-primary-text font-medium">USD</p>
+                </div>
+                <div class="flex flex-col md:flex-row gap-2 md:gap-12">
+                  <div
+                    class="flex justify-between md:justify-start items-center gap-4 md:gap-3 bg-gray-50 md:bg-transparent px-3 py-1 md:p-0 rounded"
+                  >
+                    <p class="text-primary-text">Buy</p>
+                    <p class="text-primary-text">3,315 MMK</p>
+                  </div>
+                  <div
+                    class="flex justify-between md:justify-start items-center gap-4 md:gap-3 bg-gray-50 md:bg-transparent px-3 py-1 md:p-0 rounded"
+                  >
+                    <p class="text-primary-text">Sell</p>
+                    <p class="text-primary-text">3,324 MMK</p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex justify-between items-center px-6 md:px-8 py-4 border-b border-gray-50 lg:border-none"
+              >
+                <div class="flex gap-3 items-center">
+                  <img
+                    src="./image/euro.svg"
+                    class="w-8 h-8 md:w-10 md:h-10"
+                    alt=""
+                  />
+                  <p class="text-primary-text">EUR</p>
+                </div>
+                <div class="flex flex-col md:flex-row gap-2 md:gap-12">
+                  <div
+                    class="flex justify-between md:justify-start items-center gap-4 md:gap-3 bg-gray-50 md:bg-transparent px-3 py-1 md:p-0 rounded"
+                  >
+                    <p class="text-primary-text">Buy</p>
+                    <p class="text-primary-text">3,315 MMK</p>
+                  </div>
+                  <div
+                    class="flex justify-between md:justify-start items-center gap-4 md:gap-3 bg-gray-50 md:bg-transparent px-3 py-1 md:p-0 rounded"
+                  >
+                    <p class="text-primary-text">Sell</p>
+                    <p class="text-primary-text">3,324 MMK</p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex justify-between items-center px-6 md:px-8 py-4 border-b border-gray-50 lg:border-none"
+              >
+                <div class="flex gap-3 items-center">
+                  <img
+                    src="./image/singpore.svg"
+                    class="w-8 h-8 md:w-10 md:h-10"
+                    alt=""
+                  />
+                  <p class="text-primary-text">SGD</p>
+                </div>
+                <div class="flex flex-col md:flex-row gap-2 md:gap-12">
+                  <div
+                    class="flex justify-between md:justify-start items-center gap-4 md:gap-3 bg-gray-50 md:bg-transparent px-3 py-1 md:p-0 rounded"
+                  >
+                    <p class="text-primary-text">Buy</p>
+                    <p class="text-primary-text">3,315 MMK</p>
+                  </div>
+                  <div
+                    class="flex justify-between md:justify-start items-center gap-4 md:gap-3 bg-gray-50 md:bg-transparent px-3 py-1 md:p-0 rounded"
+                  >
+                    <p class="text-primary-text">Sell</p>
+                    <p class="text-primary-text">3,324 MMK</p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex justify-between items-center px-6 md:px-8 py-4 border-b border-gray-50 lg:border-none"
+              >
+                <div class="flex gap-3 items-center">
+                  <img
+                    src="./image/thai.svg"
+                    class="w-8 h-8 md:w-10 md:h-10"
+                    alt=""
+                  />
+                  <p class="text-primary-text">THB</p>
+                </div>
+                <div class="flex flex-col md:flex-row gap-2 md:gap-12">
+                  <div
+                    class="flex justify-between md:justify-start items-center gap-4 md:gap-3 bg-gray-50 md:bg-transparent px-3 py-1 md:p-0 rounded"
+                  >
+                    <p class="text-primary-text">Buy</p>
+                    <p class="text-primary-text">3,315 MMK</p>
+                  </div>
+                  <div
+                    class="flex justify-between md:justify-start items-center gap-4 md:gap-3 bg-gray-50 md:bg-transparent px-3 py-1 md:p-0 rounded"
+                  >
+                    <p class="text-primary-text">Sell</p>
+                    <p class="text-primary-text">3,324 MMK</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full lg:w-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-8"
+          >
+            <div
+              class="bg-text-surface flex-col flex justify-center items-center p-4 min-w-[140px] md:w-[216px] h-[133px] rounded-xl gap-4 shadow-sm"
+            >
+              <img src="./image/money-bag (3) 1.svg" alt="" class="w-10 h-10" />
+              <p class="text-primary-text text-sm md:text-base text-center">
+                Open an Account
+              </p>
+            </div>
+            <div
+              class="bg-text-surface flex-col flex justify-center items-center p-4 min-w-[140px] md:w-[216px] h-[133px] rounded-xl gap-4 shadow-sm"
+            >
+              <img src="./image/icon.svg" alt="" class="w-10 h-10" />
+              <p class="text-primary-text text-sm md:text-base text-center">
+                Get a Travel Loan
+              </p>
+            </div>
+            <div
+              class="bg-text-surface flex-col flex justify-center items-center p-4 min-w-[140px] md:w-[216px] h-[133px] rounded-xl gap-4 shadow-sm"
+            >
+              <img src="./image/calculator.svg" alt="" class="w-10 h-10" />
+              <p class="text-primary-text text-sm md:text-base text-center">
+                Loan Calculator
+              </p>
+            </div>
+            <div
+              class="bg-text-surface flex-col flex justify-center items-center p-4 min-w-[140px] md:w-[216px] h-[133px] rounded-xl gap-4 shadow-sm"
+            >
+              <img src="./image/card.svg" alt="" class="w-10 h-10" />
+              <p class="text-primary-text text-sm md:text-base text-center">
+                Apply MPU Card
+              </p>
+            </div>
+            <div
+              class="bg-text-surface flex-col flex justify-center items-center p-4 min-w-[140px] md:w-[216px] h-[133px] rounded-xl gap-4 shadow-sm"
+            >
+              <img src="./image/bank.svg" alt="" class="w-10 h-10" />
+              <p class="text-primary-text text-sm md:text-base text-center">
+                Our Branches
+              </p>
+            </div>
+            <div
+              class="bg-text-surface flex-col flex justify-center items-center p-4 min-w-[140px] md:w-[216px] h-[133px] rounded-xl gap-4 shadow-sm"
+            >
+              <img src="./image/contact.svg" alt="" class="w-10 h-10" />
+              <p class="text-primary-text text-sm md:text-base text-center">
+                Contact Us
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- exchange rate end  -->
+
+    <!-- social footer start  -->
+    <section
+      class="flex flex-col lg:flex-row justify-between items-start bg-footer-color text-text-surface px-6 md:px-14 py-10 lg:py-14 gap-12 lg:gap-8"
+    >
+      <div class="w-full lg:w-1/3">
+        <h1
+          class="pb-6 text-xl font-semibold border-b border-white/20 lg:border-none"
+        >
+          Contact Us
+        </h1>
+        <div class="flex flex-col gap-5 mt-6 lg:mt-0">
+          <div class="flex gap-4 items-start">
+            <img src="./image/Group (1).svg" alt="" class="w-5 h-5 mt-1" />
+            <a href="#" class="hover:underline opacity-90 text-sm md:text-base"
+              >info@innovix-bank.com</a
+            >
+          </div>
+          <div class="flex gap-4 items-start">
+            <img src="./image/gg_pin.svg" alt="" class="w-5 h-5 mt-1" />
+            <a
+              href="#"
+              class="hover:underline opacity-90 text-sm md:text-base leading-relaxed"
+            >
+              Building 10, 5th Floor, MICT Park, Hlaing Township, Yangon.
+            </a>
+          </div>
+          <div class="flex gap-4 items-center">
+            <img src="./image/tabler_phone-call.svg" alt="" class="w-5 h-5" />
+            <a href="#" class="hover:underline opacity-90 text-sm md:text-base"
+              >+959 123456789</a
+            >
+          </div>
+          <div class="flex gap-5 pt-2">
+            <img
+              src="./image/facebook.svg"
+              alt="FB"
+              class="w-6 h-6 cursor-pointer hover:scale-110 transition-transform"
+            />
+            <img
+              src="./image/linked in.svg"
+              alt="IN"
+              class="w-6 h-6 cursor-pointer hover:scale-110 transition-transform"
+            />
+            <img
+              src="./image/instagram.svg"
+              alt="IG"
+              class="w-6 h-6 cursor-pointer hover:scale-110 transition-transform"
+            />
+            <img
+              src="./image/viber.svg"
+              alt="VB"
+              class="w-6 h-6 cursor-pointer hover:scale-110 transition-transform"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="grid grid-cols-2 md:grid-cols-4 lg:flex gap-8 md:gap-10 lg:gap-12 w-full lg:w-auto"
+      >
+        <div class="flex flex-col gap-5">
+          <h1 class="text-lg font-medium">Personal Banking</h1>
+          <ul class="flex flex-col gap-3 opacity-80">
+            <li class="text-sm font-normal hover:text-white cursor-pointer">
+              Deposit
+            </li>
+            <li class="text-sm font-normal hover:text-white cursor-pointer">
+              Loans and Advances
+            </li>
+            <li class="text-sm font-normal hover:text-white cursor-pointer">
+              Remittance
+            </li>
+            <li class="text-sm font-normal hover:text-white cursor-pointer">
+              Other Services
+            </li>
+            <li class="text-sm font-normal hover:text-white cursor-pointer">
+              Bill Payment
+            </li>
+            <li class="text-sm font-normal hover:text-white cursor-pointer">
+              Bancassurance
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-5">
+          <h1 class="text-lg font-medium">Business Banking</h1>
+          <ul class="flex flex-col gap-3 opacity-80">
+            <li class="text-sm font-normal hover:text-white cursor-pointer">
+              Deposit
+            </li>
+            <li class="text-sm font-normal hover:text-white cursor-pointer">
+              Loans and Advances
+            </li>
+            <li class="text-sm font-normal hover:text-white cursor-pointer">
+              Trade Services
+            </li>
+            <li class="text-sm font-normal hover:text-white cursor-pointer">
+              Treasury
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-5">
+          <h1 class="text-lg font-medium">About Us</h1>
+          <ul class="flex flex-col gap-3 opacity-80">
+            <li class="text-sm font-normal hover:text-white cursor-pointer">
+              About MTB Bank
+            </li>
+            <li class="text-sm font-normal hover:text-white cursor-pointer">
+              ATM & Branches
+            </li>
+            <li class="text-sm font-normal hover:text-white cursor-pointer">
+              Careers
+            </li>
+            <li class="text-sm font-normal hover:text-white cursor-pointer">
+              News
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-5">
+          <h1 class="text-lg font-medium">Useful Links</h1>
+          <ul class="flex flex-col gap-3 opacity-80">
+            <li class="text-sm font-normal hover:text-white cursor-pointer">
+              Contact Us
+            </li>
+            <li class="text-sm font-normal hover:text-white cursor-pointer">
+              FAQs
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- social footer end  -->
+
+    <!-- footer start  -->
+    <footer
+      class="bg-secondary-color text-text-surface border-t border-white/10"
+    >
+      <div class="max-w-7xl mx-auto px-4 py-6">
+        <div
+          class="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-8 text-center text-xs md:text-sm opacity-80"
+        >
+          <p class="order-2 md:order-1">
+            © 2024 Myanma Tourism Bank. All Rights Reserved.
+          </p>
+
+          <div class="hidden md:block h-4 w-px bg-white/20 order-2"></div>
+
+          <div class="flex gap-6 order-1 md:order-3 mb-2 md:mb-0">
+            <a href="#" class="hover:text-white transition-colors"
+              >Terms & Conditions</a
+            >
+            <a href="#" class="hover:text-white transition-colors"
+              >Privacy Policies</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer End  -->
+    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+  </body>
+</html>

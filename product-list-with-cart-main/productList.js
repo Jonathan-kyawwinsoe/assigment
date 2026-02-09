@@ -104,40 +104,42 @@ function changeQty(index, change) {
     cart = cart.filter((item) => item.index !== index);
     addBtn.classList.remove("hidden");
     qtyBtn.classList.add("hidden");
-    qtyBtn.classList.add("flex");
+    qtyBtn.classList.add("femptyCartViewlex");
   } else {
     const count = document.getElementById(`count-${index}`);
     count.innerText = itemInCart.quantity;
   }
   renderCart();
 }
+
 function renderCart() {
   const cartContainer = document.getElementById("cart-items");
+  const extraCart = document.getElementById("extra-div");
   const emptyCartView = document.getElementById("empty-cart");
-  const checkOutSection = document.getElementById("checkOut");
+  const checkoutSection = document.getElementById("checkout");
   const totalPriceDisplay = document.getElementById("price-total");
   const cartCountLabel = document.getElementById("cart-count");
 
+  let totalPrice = 0;
+
   if (cart.length === 0) {
-    emptyCartView.classList.remove("hidden");
-    checkOutSection.classList.add("hidden");
-    checkOutSection.classList.add("flex");
-    cartContainer.innerText = "";
-    if (cartCountLabel) cartCountLabel.innerText = "0";
-    return;
+    if (emptyCartView) {
+      emptyCartView.classList.remove("hidden");
+    }
+    checkoutSection.classList.add("hidden");
+  } else {
+    if (emptyCartView) {
+      emptyCartView.classList.add("hidden");
+    }
+    checkoutSection.classList.remove("hidden");
   }
 
-  if (cartCountLabel == 0) {
-    emptyCartView.classList.add("hidden");
-  }
-
-  checkOutSection.classList.remove("hidden");
-  let totalOrderPrice = 0;
   let cartHTML = "";
-
+  let totalQty = 0;
   cart.forEach((item) => {
-    const itemTotal = item.price * item.quantity;
-    totalOrderPrice = itemTotal;
+    totalPrice += item.price * item.quantity;
+
+    totalQty = cart.length;
     cartHTML += `
       <div class="flex justify-between items-center py-4 border-b border-gray-100">
         <div>
@@ -145,15 +147,34 @@ function renderCart() {
           <div class="flex gap-4 text-sm mt-1">
             <span class="text-rose-600 font-bold">${item.quantity}x</span>
             <span class="text-gray-400">@ $${item.price.toFixed(2)}</span>
-            <span class="text-gray-600 font-semibold">$${itemTotal.toFixed(2)}</span>
+            <span class="text-gray-600 font-semibold">$${totalPrice.toFixed(2)}</span>
           </div>
         </div>
-        <button onclick="removeItem(${item.index})" class="text-gray-400 hover:text-gray-800 border border-gray-300 rounded-full p-1">
+        <button onclick="removeItem(${item.index})" 
+        class="text-gray-400 hover:text-gray-800 border border-gray-300 rounded-full p-1">
            <img src="./assets/images/icon-remove-item.svg" alt="remove" />
         </button>
       </div>
     `;
   });
-  cartContainer.innerHTML = cartHTML;
-  console.log({ type: typeof cartContainer, cartContainer });
+  extraCart.innerHTML = cartHTML;
+  totalPriceDisplay.innerText = totalPrice;
+  cartCountLabel.innerText = totalQty;
+}
+function removeItem(index) {
+  cart = cart.filter((item) => item.index !== index);
+  const addBtn = document.getElementById(`addToCard-${index}`);
+  const qtySelector = document.getElementById(`qty-btn-${index}`);
+  const count = document.getElementById(`count-${index}`);
+
+  if (addBtn && qtySelector) {
+    addBtn.classList.remove("hidden");
+    qtySelector.classList.add("hidden");
+    qtySelector.classList.remove("flex");
+    count.innerText = "1";
+  }
+  renderCart();
+}
+function confirm() {
+  alert("Welcome");
 }

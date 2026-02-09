@@ -194,3 +194,18 @@ function BtnClick(index) {
 //   cart.splice(indexInCart, 1);
 //   renderCart();
 // }
+
+
+
+if (cart.length === 0) {
+    emptyCartView.classList.remove("hidden");
+    checkOutSection.classList.add("hidden");
+    cartCountLabel.innerText = "0";
+    totalPriceDisplay.innerText = "$0.00";
+    return;
+  }
+
+  emptyCartView.classList.add("hidden");
+  checkOutSection.classList.remove("hidden");
+  let itemTotal = 0;
+  let totalQty = 0;
