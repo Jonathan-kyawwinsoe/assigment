@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #fdfdfd;
+  --color-darkBlue: #003459;
+  --color-cardColor: #fdfdfd;
+  --color-Linear: #ffe7ba;
+  --color-Netural: #ebeeef;
+  --color-button: #003459;
+  --color-NeturalColor: #99a2a5;
+  --color-header: #00171f;
+  
+}
